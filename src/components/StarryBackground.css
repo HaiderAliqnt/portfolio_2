@@ -1,0 +1,56 @@
+.starry-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--bg);
+}
+
+.starry-bg__static,
+.starry-bg__shooting {
+  position: absolute;
+  inset: 0;
+}
+
+.static-star {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  animation-name: twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 84px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(87, 168, 255, 0) 0%,
+    var(--accent-blue) 65%,
+    #d9ecff 100%
+  );
+  box-shadow: 0 0 8px 1px rgba(87, 168, 255, 0.65);
+  transform-origin: left center;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 480px) {
+  .shooting-star {
+    width: 56px;
+    height: 1.5px;
+  }
+}

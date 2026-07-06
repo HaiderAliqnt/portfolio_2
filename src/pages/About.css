@@ -1,0 +1,126 @@
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-family: var(--font-body);
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 14px;
+}
+
+.about-content p {
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 14px;
+    max-width: 46ch;
+}
+
+.stack-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stack-list li {
+    font-weight: 600;
+    font-size: 15.5px;
+}
+
+.stack-arrow {
+    color: var(--accent-blue);
+}
+
+.about-figure {
+    position: relative;
+    min-height: 260px;
+}
+
+.sticky-note {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 190px;
+    background: var(--accent-red);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.35;
+    padding: 22px 20px;
+    border-radius: 4px;
+    box-shadow: 0 18px 30px -12px rgba(240, 82, 76, 0.45);
+    z-index: 2;
+}
+
+.figure-frame {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 150px;
+    height: 170px;
+    background: var(--bg-elevated-2);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+}
+
+.figure-frame img {
+    width: 82%;
+    height: 82%;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 860px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .about-figure {
+        display: flex;
+        gap: 16px;
+        min-height: unset;
+    }
+    .sticky-note,
+    .figure-frame {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content p {
+        font-size: 15px;
+        max-width: none;
+    }
+
+    .about-figure {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sticky-note {
+        width: 100%;
+        font-size: 14px;
+        padding: 18px 18px;
+    }
+
+    .figure-frame {
+        width: 120px;
+        height: 130px;
+    }
+}

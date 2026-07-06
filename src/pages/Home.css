@@ -1,0 +1,125 @@
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 760px;
+    margin: 40px auto 0;
+}
+
+.home-grid__stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 26px 28px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--text-primary);
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.home-tile:hover {
+    border-color: var(--border-strong);
+    background: var(--bg-elevated-2);
+}
+
+.home-tile__glyph {
+    width: 30px;
+    height: 30px;
+    color: var(--text-secondary);
+}
+
+.home-tile__glyph svg {
+    width: 100%;
+    height: 100%;
+}
+
+.home-tile__glyph--figure {
+    width: 52px;
+    height: 58px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: visible;
+}
+
+.home-tile__glyph--figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    /* let the doodle sit slightly proud of the tile, like a sticker */
+    transform: translateY(4px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.home-tile--projects {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 18px;
+    padding: 30px;
+}
+
+.home-tile--projects .home-tile__glyph--outline {
+    width: 42px;
+    height: 42px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+        gap: 16px;
+    }
+
+    .home-grid__stack {
+        gap: 16px;
+    }
+
+    .home-tile {
+        padding: 22px 22px;
+        font-size: 17px;
+    }
+
+    .home-tile--projects {
+        min-height: 160px;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-tile {
+        padding: 18px 18px;
+        font-size: 16px;
+        border-radius: var(--radius-md);
+    }
+
+    .home-tile__glyph {
+        width: 24px;
+        height: 24px;
+    }
+
+    .home-tile__glyph--figure {
+        width: 32px;
+        height: 38px;
+    }
+
+    .home-tile__glyph--figure img {
+        transform: translateY(2px);
+    }
+}
