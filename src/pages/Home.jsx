@@ -4,7 +4,8 @@ import gsap from "gsap";
 import Header from "../components/Header";
 import ProjectMarquee from "../components/ProjectMarquee";
 import "./Home.css";
-import doodle from "../assets/doodle2.png";
+import doodle from "../../public/assets/doodle2.png";
+
 export default function Home() {
   const tilesRef = useRef([]);
   tilesRef.current = [];
