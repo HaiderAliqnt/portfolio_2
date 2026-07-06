@@ -50,8 +50,8 @@ export default function Home() {
           >
             <span>About Me</span>
             <span className="home-tile__glyph home-tile__glyph--figure">
-              {/* <img src="src\assets\doodle2.png"></img>*/}
-              {doodle}
+              <img src="\assets\doodle2.png"></img>
+              {/* {doodle}*/}
             </span>
           </Link>
 
