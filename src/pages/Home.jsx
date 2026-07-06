@@ -4,7 +4,7 @@ import gsap from "gsap";
 import Header from "../components/Header";
 import ProjectMarquee from "../components/ProjectMarquee";
 import "./Home.css";
-
+import doodle from "../assets/doodle2.png";
 export default function Home() {
   const tilesRef = useRef([]);
   tilesRef.current = [];
@@ -50,7 +50,8 @@ export default function Home() {
           >
             <span>About Me</span>
             <span className="home-tile__glyph home-tile__glyph--figure">
-              <img src="src\assets\doodle2.png"></img>
+              {/* <img src="src\assets\doodle2.png"></img>*/}
+              {doodle}
             </span>
           </Link>
 
