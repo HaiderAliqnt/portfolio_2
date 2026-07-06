@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import Header from "../components/Header";
+import ProjectMarquee from "../components/ProjectMarquee";
 import "./Home.css";
 
 export default function Home() {
@@ -103,6 +104,9 @@ export default function Home() {
           onMouseLeave={handleLeave}
           className="home-tile home-tile--projects"
         >
+          <div className="home-tile--projects__marquee-slot">
+            <ProjectMarquee />
+          </div>
           <span className="home-tile__glyph home-tile__glyph--outline">
             <svg
               viewBox="0 0 24 24"

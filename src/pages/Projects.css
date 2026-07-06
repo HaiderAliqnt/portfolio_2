@@ -1,115 +1,131 @@
 .section-title--center {
-  text-align: center;
+    text-align: center;
 }
 
 .projects-layout {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 40px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: start;
 }
 
 .project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 560px;
 }
 
 .project-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 26px 28px;
-  border-radius: var(--radius-lg);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 1px;
-  color: #1a1a1a;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 28px;
+    border-radius: var(--radius-lg);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .project-card--red {
-  background: var(--accent-red);
-  box-shadow: 0 20px 34px -18px rgba(240, 82, 76, 0.55);
+    background: var(--accent-red);
+    box-shadow: 0 20px 34px -18px rgba(240, 82, 76, 0.55);
 }
 
 .project-card--yellow {
-  background: var(--accent-yellow);
-  box-shadow: 0 20px 34px -18px rgba(255, 190, 61, 0.55);
+    background: var(--accent-yellow);
+    box-shadow: 0 20px 34px -18px rgba(255, 190, 61, 0.55);
 }
 
 .project-card__thumb {
-  width: 60px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.65);
-  border-radius: 10px;
+    width: 60px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+}
+.project-card__thumb svg {
+    width: 26px;
+    height: 26px;
 }
 
 .filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 56px;
 }
 
 .filter-btn {
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  padding: 10px 22px;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  color: var(--text-secondary);
-  transition: background 0.2s ease, color 0.2s ease;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
 .filter-btn:hover {
-  color: var(--text-primary);
+    color: var(--text-primary);
 }
 
 .filter-btn--active {
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
-  color: #08080a;
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #08080a;
 }
 
 @media (max-width: 780px) {
-  .projects-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .filter-group {
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 0;
-    flex-wrap: wrap;
-  }
+    .projects-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .filter-group {
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 0;
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 480px) {
-  .section-title--center {
-    font-size: 22px;
-  }
+    .section-title--center {
+        font-size: 22px;
+    }
 
-  .project-card {
-    padding: 20px 20px;
-    font-size: 16px;
-  }
+    .project-card {
+        padding: 20px 20px;
+        font-size: 16px;
+    }
 
-  .project-card__thumb {
-    width: 46px;
-    height: 36px;
-  }
+    .project-card__thumb {
+        width: 46px;
+        height: 36px;
+    }
+    .project-card__thumb svg {
+        width: 20px;
+        height: 20px;
+    }
 
-  .filter-btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
 }

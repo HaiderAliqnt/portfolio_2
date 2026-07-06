@@ -4,6 +4,7 @@ import gsap from "gsap";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { getProject } from "../data/projects";
+import { ProjectIcon } from "../components/projectIcons";
 import "./ProjectDetail.css";
 
 export default function ProjectDetail() {
@@ -17,12 +18,12 @@ export default function ProjectDetail() {
     tl.fromTo(
       bannerRef.current,
       { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
     ).fromTo(
       bodyRef.current.children,
       { opacity: 0, y: 12 },
       { opacity: 1, y: 0, duration: 0.4, stagger: 0.08, ease: "power2.out" },
-      "-=0.25"
+      "-=0.25",
     );
   }, [id]);
 
@@ -42,9 +43,14 @@ export default function ProjectDetail() {
       <Header />
       <Sidebar />
 
-      <div className={`project-banner project-banner--${project.color}`} ref={bannerRef}>
+      <div
+        className={`project-banner project-banner--${project.color}`}
+        ref={bannerRef}
+      >
         <span className="project-banner__name">{project.name}</span>
-        <span className="project-banner__thumb" />
+        <span className="project-banner__thumb">
+          <ProjectIcon id={project.id} />
+        </span>
       </div>
 
       <div className="project-body" ref={bodyRef}>

@@ -4,6 +4,7 @@ import gsap from "gsap";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { projects } from "../data/projects";
+import { ProjectIcon } from "../components/projectIcons";
 import "./Projects.css";
 
 const FILTERS = ["ALL", "DEV", "CYB"];
@@ -18,7 +19,7 @@ export default function Projects() {
     gsap.fromTo(
       listRef.current.children,
       { opacity: 0, y: 16 },
-      { opacity: 1, y: 0, duration: 0.4, stagger: 0.07, ease: "power2.out" }
+      { opacity: 1, y: 0, duration: 0.4, stagger: 0.07, ease: "power2.out" },
     );
   }, [filter]);
 
@@ -38,7 +39,9 @@ export default function Projects() {
                 className={`project-card project-card--${p.color}`}
               >
                 <span className="project-card__name">{p.name}</span>
-                <span className="project-card__thumb" />
+                <span className="project-card__thumb">
+                  <ProjectIcon id={p.id} />
+                </span>
               </Link>
             ))}
           </div>
@@ -48,7 +51,9 @@ export default function Projects() {
           {FILTERS.map((f) => (
             <button
               key={f}
-              className={"filter-btn" + (filter === f ? " filter-btn--active" : "")}
+              className={
+                "filter-btn" + (filter === f ? " filter-btn--active" : "")
+              }
               onClick={() => setFilter(f)}
             >
               {f}
