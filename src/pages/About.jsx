@@ -70,7 +70,7 @@ export default function About() {
             "I hope the systems I build create opportunities for others."
           </div>
           <div className="figure-frame">
-            <img src="src\assets\doodle2.png"></img>
+            <img src="\assets\doodle2.png"></img>
           </div>
         </div>
       </div>
