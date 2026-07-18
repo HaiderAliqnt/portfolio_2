@@ -1,6 +1,3 @@
-// Category -> card color is fixed here, once, so every project (current
-// and future) stays visually consistent automatically. Add a new tag to
-// TAG_COLORS if you introduce a third category.
 export const TAG_COLORS = {
   DEV: "red",
   CYB: "yellow",
@@ -33,6 +30,15 @@ const rawProjects = [
     about:
       "An in-progress RISC-V emulator written in C, implementing the fetch-decode-execute cycle, all six RV32I instruction formats, memory, and CPU state from scratch. The long-term target is booting DOOM on it — a forcing function for getting the ISA exactly right.",
     stack: ["C", "Computer Architecture", "RV32I"],
+  },
+  {
+    id: "llm-intrusion-detection",
+    name: "LLM x IDS",
+    tag: "CYB",
+    tagline: "Can an LLM replace a firewall?",
+    about:
+      "An ongoing research collaboration studying LLMs for network intrusion detection — comparing prompting, RAG, and fine-tuned transformer classifiers against classic ML baselines for attack severity classification. Digging into where LLMs generalize to zero-day attacks and where they don't, and how to evaluate security ML claims without falling into common methodological traps.",
+    stack: ["Python", "LLMs", "RAG", "Network Security"],
   },
 ];
 
