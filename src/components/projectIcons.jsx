@@ -48,10 +48,26 @@ function ChipIcon(props) {
   );
 }
 
+function ShieldSparkIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      {...props}
+    >
+      <path d="M12 3l6 2.2v5.3c0 4.6-2.6 7.9-6 9.5-3.4-1.6-6-4.9-6-9.5V5.2L12 3z" />
+      <path d="M12 9v6M9.3 10.5l5.4 3M14.7 10.5l-5.4 3" />
+    </svg>
+  );
+}
+
 export const PROJECT_ICONS = {
   gikgo: BoxIcon,
   "jwt-auditor": ShieldKeyIcon,
   "riscv-emulator": ChipIcon,
+  "llm-intrusion-detection": ShieldSparkIcon,
 };
 
 export function ProjectIcon({ id, className }) {
