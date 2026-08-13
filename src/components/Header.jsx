@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import "./Header.css";
 
-const phrases = ["A WEB DEVELOPER", "AN APP DEVELOPER", "AN ETHICAL HACKER"];
+const phrases = ["WEB DEVELOPER", "APP DEVELOPER", "ETHICAL HACKER" , "SECURITY RESEARCHER" ];
 
 export default function Header() {
   const nameRef = useRef(null);
