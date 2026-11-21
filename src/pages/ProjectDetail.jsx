@@ -63,12 +63,6 @@ export default function ProjectDetail() {
         <p className="project-tagline">{project.tagline}</p>
         <p className="project-about">{project.about}</p>
 
-        <ul className="project-stack">
-          {project.stack.map((s) => (
-            <li key={s}>{s}</li>
-          ))}
-        </ul>
-
         {project.link && (
           <a
             href={project.link}
@@ -76,9 +70,15 @@ export default function ProjectDetail() {
             rel="noopener noreferrer"
             className="project-link"
           >
-            Click here to view project ↗
+            Click here to view project
           </a>
         )}
+
+        <ul className="project-stack">
+          {project.stack.map((s) => (
+            <li key={s}>{s}</li>
+          ))}
+        </ul>
 
         <Link to="/projects" className="back-link">
           &larr; View other projects
