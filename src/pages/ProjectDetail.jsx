@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import gsap from "gsap";
@@ -58,6 +59,7 @@ export default function ProjectDetail() {
           <h3>About</h3>
           <span className="project-tag">{project.tag}</span>
         </div>
+
         <p className="project-tagline">{project.tagline}</p>
         <p className="project-about">{project.about}</p>
 
@@ -66,6 +68,17 @@ export default function ProjectDetail() {
             <li key={s}>{s}</li>
           ))}
         </ul>
+
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            Click here to view project ↗
+          </a>
+        )}
 
         <Link to="/projects" className="back-link">
           &larr; View other projects
